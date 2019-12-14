@@ -1,0 +1,22 @@
+<html>
+<script>
+
+function myFunction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("my-demo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "https://jpnxxdkjk0.execute-api.us-east-2.amazonaws.com/default/MyFirstLambdaFunction", true);
+    xhttp.send();
+
+}
+
+</script>
+<body><div align="center"><br><br><br><br>
+<h1>Hello <span id="my-demo">Cloud Gurus!</span></h1>
+<button onclick="myFunction()">Click me</button><br>
+<img src="https://s3.us-east-2.amazonaws.com/ainttheend.com/133326443-77853166-1516699138.jpg"></div>
+</body>
+</html>
